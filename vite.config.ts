@@ -11,7 +11,7 @@ import { peerDependencies, dependencies } from './package.json';
 
 const externalPackages = [
   // We need to build @square/web-sdk with the package to avoid problems with ES Modules in bundlers like Next.js
-  ...Object.keys(dependencies).filter((name) => name !== '@square/web-sdk'),
+  ...Object.keys(dependencies),
   ...Object.keys(peerDependencies),
 ];
 
